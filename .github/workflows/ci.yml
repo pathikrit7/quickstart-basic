@@ -20,5 +20,6 @@ jobs:
         cp .env.ci .env
         php artisan key:generate
         php artisan migrate
+        php artisan serve
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit tests/
